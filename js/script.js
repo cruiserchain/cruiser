@@ -5,6 +5,9 @@ $(function () {
   var addUrl = urlBase + '/api/invoke'
   var searchUrl = urlBase + '/api/query'
   var ownerChangeUrl = urlBase + '/api/changeowner'
+  var UserRegUrl = urlBase + '/api/registerUser'
+
+
   $('#add_vin').val(makeid())
 
   // Add Vehicle Form
@@ -25,15 +28,31 @@ $(function () {
   // Change Owner
   $('#changeOwnerFrm').submit(function (e) {
     e.preventDefault()
+    var values = $(this).serialize()
+    var vin = $("#vin_num").val()
     $.ajax({
       type: 'POST',
-      url: ownerChangeUrl,
-      data: {},
-      success: function () {
-        $(this).trigger('reset')
+      url: UserRegUrl,
+      data: values,
+      success: function (result) {
+        var data = [vin, result.res]
+        console.log(data)
+
+
+        $.ajax({
+          type: 'POST',
+          url: ownerChangeUrl,
+          data: {data: data},
+          success: function (succ) {
+            alert(succ.res)
+            $(this).trigger('reset')
+          }
+        })
       }
     })
   })
+
+
 
   // Search
   $('#searchForm').submit(function (e) {
@@ -85,6 +104,7 @@ $(function () {
         </div>'
 
         $('.live_result').html(html)
+        $("#vin_num").val(item.VIN)
 
         $('.results').css('display', 'block')
         $(this).trigger('reset')
