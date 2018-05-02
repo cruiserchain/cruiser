@@ -97,5 +97,6 @@
   margin: 150px 0
 }
 .results {
-  min-height: 300px
+  min-height: 300px;
+  display: none;
 }

@@ -48,6 +48,7 @@ $(function () {
       url: searchUrl,
       data: {},
       success: function () {
+        $('.results').css('display': 'block')
         $(this).trigger('reset')
       }
     })
