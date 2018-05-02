@@ -57,7 +57,7 @@ $(function () {
         console.log('success')
         console.log(data.res)
 
-        $('.results').css('display': 'block')
+        $('.results').css('display', 'block')
         $(this).trigger('reset')
       }
     })
