@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vehicle | Cruiser</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src='js/script.js'></script>
+
+</head>
+<body>
+
+
+  <div class="ui huge fixed inverted menu">
+    <div class="ui container">
+      <a href="index.html" class="header item">
+        <img class="logo" src="car.svg">
+
+      </a>
+      <a href="index.html" class="item">Home</a>
+      <a href="search.html" class="item">Search</a>
+      <div class="ui simple dropdown item">
+        Admin <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="addvehicle.html">Add Vehicle</a>
+          <a class="item" href="addvehicle.html">Ownerhsip change</a>
+          <a class="item" href="addvehicle.html">Parts</a>
+          <a class="item" href="addvehicle.html">Search</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="ui main text container">
+
+
+
+    <h2 class="ui header">
+      <i class="car icon"></i>
+      <div class="content">
+        Add your Vehicle
+      </div>
+    </h2>
+
+    <hr><br>
+
+
+    <form id="addVehicle" class="ui massive form" method="POST" action="/">
+
+      <div class="field">
+        <label>VIN</label>
+        <input placeholder="Vehicle Identification Number" name='vin' type="text">
+      </div>
+      <div class="field">
+        <label>Make</label>
+        <input placeholder="Make" name="make" type="text">
+      </div>
+
+      <div class="field">
+        <label>Modal</label>
+        <input placeholder="Modal" name="modal" type="text">
+      </div>
+
+      <div class="field">
+        <label>Year</label>
+        <input placeholder="Year" name="year" type="text">
+      </div>
+
+      <div class="field">
+        <label>Plate</label>
+        <input placeholder="Plate" name="plate" type="text">
+      </div>
+
+      <div class="field">
+        <label>Engine Number</label>
+        <input placeholder="Engine Number" name="engineno" type="text">
+      </div>
+
+      <h2 class="ui header">
+        <i class="user icon"></i>
+        <div class="content">
+          Owner
+        </div>
+      </h2>
+
+
+      <div class="field">
+        <label>Name</label>
+        <input placeholder="Full Name" name="ownername" type="text">
+      </div>
+
+
+      <div class="field">
+        <label>Address</label>
+        <textarea placeholder="Address" name="owneraddress" ></textarea>
+      </div>
+
+      <div class="field">
+        <label>Contact</label>
+        <input placeholder="Contact" name="ownerphone" type="text">
+      </div>
+
+
+      <button class="ui massive positive submit button" type='submit'>Submit</button>
+    </form>
+  </div>
+
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      <div class="ui stackable inverted grid">
+        <div class="three wide column">
+
+        </div>
+        <div class="three wide column">
+
+        </div>
+        <div class="three wide column">
+
+        </div>
+        <div class="seven wide column">
+
+        </div>
+      </div>
+      <div class="ui inverted section divider"></div>
+      <div class="ui horizontal inverted small divided link list">
+        <a class="item" href="#">Site Map</a>
+        <a class="item" href="#">Contact Us</a>
+        <a class="item" href="#">Terms and Conditions</a>
+        <a class="item" href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
