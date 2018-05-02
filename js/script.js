@@ -94,7 +94,6 @@ $(function () {
 
   $('#changeOwnerBtn').click(function () {
     $('#changeOwnerFrm').css('display', 'block')
-
   })
 })
 
