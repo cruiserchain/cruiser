@@ -2,7 +2,7 @@
 
 $(function () {
   console.log('k')
-  var urlBase = 'http://localhost'
+  var urlBase = 'http://localhost:8080'
   var addUrl = urlBase + '/api/invoke'
   var searchUrl = urlBase + '/api/query'
   var ownerChangeUrl = urlBase + '/api/changeowner'
@@ -10,12 +10,19 @@ $(function () {
   // Add Vehicle Form
   $('#addVehicle').submit(function (e) {
     e.preventDefault()
+    var values = $(this).serialize()
+    console.log(values)
     $.ajax({
       type: 'POST',
       url: addUrl,
-      data: {},
-      success: function () {
-        $(this).trigger('reset')
+      data: values,
+      beforeSend: function () {
+        console.log('beforeSend')
+      },
+      success: function (data) {
+        console.log('success')
+        console.log(data)
+        // $(this).trigger('reset')
       }
     })
   })
