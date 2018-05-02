@@ -1,29 +1,26 @@
 'use strict'
 
 $(function () {
-  console.log('k')
+
   var urlBase = 'http://localhost:8080'
   var addUrl = urlBase + '/api/invoke'
   var searchUrl = urlBase + '/api/query'
   var ownerChangeUrl = urlBase + '/api/changeowner'
+  $("#add_vin").val(makeid())
 
   // Add Vehicle Form
   $('#addVehicle').submit(function (e) {
     e.preventDefault()
     var values = $(this).serialize()
-    console.log(values)
+    $(this).addClass('loading')
     $.ajax({
       type: 'POST',
       url: addUrl,
       data: values,
-      beforeSend: function(xhr) {
-      },
       success: function (data) {
-        console.log('success')
-        console.log(data)
-        // $(this).trigger('reset')
-      }
-    })
+       window.location.href = 'addvehicle.html'
+     }
+   })
   })
 
   // Change Owner
@@ -41,7 +38,6 @@ $(function () {
 
   // Search
   $('#searchForm').submit(function (e) {
-    alert("here")
     e.preventDefault()
     var data = []
     data.push($("#search_vin").val())
@@ -49,13 +45,48 @@ $(function () {
       type: 'POST',
       url: searchUrl,
       data: {func: 'queryCar', user: 'John', data: data},
-      beforeSend: function(xhr) {
-        console.log('beforeSend')
-
-      },
       success: function (data) {
-        console.log('success')
-        console.log(data.res)
+
+        var item = data.res
+
+        var html = '<div class="ui fluid green segment"> \
+        <table class="ui very basic celled table"> \
+        <tr> \
+        <td>VIN</td> \
+        <td>'+item.VIN+'</td> \
+        </tr> \
+        <tr> \
+        <td>Make</td> \
+        <td>'+item.make+'</td> \
+        </tr> \
+        <tr> \
+        <td>Model</td> \
+        <td>'+item.model+'</td> \
+        </tr> \
+        <tr> \
+        <td>Year</td> \
+        <td>'+item.year+'</td> \
+        </tr> \
+        <tr> \
+        <td>Plate</td> \
+        <td>'+item.plate+'</td> \
+        </tr> \
+        <tr> \
+        <td>Engine</td> \
+        <td>'+item.engine+'</td> \
+        </tr> \
+        </table> \
+        </div>\
+        <div class="ui fluid red segment">\
+        <table class="ui very basic celled table">\
+        <tr>\
+        <td>Owner</td>\
+        <td>'+item.owner+'</td>\
+        </tr>\
+        </table>\
+        </div>'
+
+        $('.live_result').html(html)
 
         $('.results').css('display', 'block')
         $(this).trigger('reset')
@@ -63,3 +94,15 @@ $(function () {
     })
   })
 })
+
+
+
+function makeid() {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+  for (var i = 0; i < 16; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
