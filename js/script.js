@@ -16,8 +16,7 @@ $(function () {
       type: 'POST',
       url: addUrl,
       data: values,
-      beforeSend: function () {
-        console.log('beforeSend')
+      beforeSend: function(xhr) {
       },
       success: function (data) {
         console.log('success')
@@ -42,12 +41,22 @@ $(function () {
 
   // Search
   $('#searchForm').submit(function (e) {
+    alert("here")
     e.preventDefault()
+    var data = []
+    data.push($("#search_vin").val())
     $.ajax({
       type: 'POST',
       url: searchUrl,
-      data: {},
-      success: function () {
+      data: {func: 'queryCar', user: 'John', data: data},
+      beforeSend: function(xhr) {
+        console.log('beforeSend')
+
+      },
+      success: function (data) {
+        console.log('success')
+        console.log(data.res)
+
         $('.results').css('display': 'block')
         $(this).trigger('reset')
       }
