@@ -100,3 +100,7 @@
   min-height: 300px;
   display: none;
 }
+
+#changeOwnerFrm {
+  display: none;
+}
