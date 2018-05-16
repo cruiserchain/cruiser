@@ -1,13 +1,12 @@
-.ui.menu .item>img:not(.ui) {
-  width: 4em !important
+.ui.menu .item > img:not(.ui) {
+  width: 4em !important;
 }
 
 .container > .infoBoxList > .shareInfoBox,
 .icon.Gplus,
-.icon.RSS
-{display:none !important;}
-
-
+.icon.RSS {
+  display: none !important;
+}
 
 .hidden.menu {
   display: none;
@@ -94,7 +93,7 @@
   }
 }
 .main.text.container {
-  margin: 150px 0
+  margin: 150px 0;
 }
 .results {
   min-height: 300px;
@@ -103,4 +102,7 @@
 
 #changeOwnerFrm {
   display: none;
+}
+p.ui.text {
+  font-size: 1.2rem;
 }

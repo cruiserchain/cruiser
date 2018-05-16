@@ -14,9 +14,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
 
-  <script type="text/javascript" src='js/script.js'>
-
-  </script>
+  <script type="text/javascript" src='js/script.js'></script>
 
 
 </head>
@@ -24,67 +22,154 @@
 
 
   <!-- <div class="ui huge fixed inverted menu">
-    <div class="ui container">
-      <a href="index.html" class="header item">
-        <img class="" src="car.svg">
-      </a>
-      <a href="index.html" class="item">Home</a>
-      <a href="search.html" class="item">Search</a>
-      <div class="ui simple dropdown item">
-        Admin <i class="dropdown icon"></i>
-        <div class="menu">
-          <a class="item" href="addvehicle.html">Add Vehicle</a>
-          <a class="item" href="search.html">Ownerhsip change</a>
-          <a class="item" href="addvehicle.html">Parts</a>
-          <a class="item" href="search.html">Search</a>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-
   <div class="ui container">
-    <div class="ui padded grid">
-      <div class="eleven wide column">
-        <h1 class="ui huge header">Cruiser</h1>
-        <p>Cruiser introduces a decentralized registry where all information related to a vehicle lifecycle from the production door to the junkyard, including vehicle ownership, insurance history, repair and maintenance, are recorded and made transparent to both businesses and consumers.</p>
-      </div>
-
-      <div class="five wide column">
-        <a class="ui fluid card" href="http://www.dog.com">
-<div class="content">
-  <i class="right floated cogs icon" style="font-size: 30px;"></i>
-  <div class="header">Cute Dog</div>
-  <div class="meta">
-    <span class="category">Animals</span>
-  </div>
-  <div class="description">
-    <p></p>
-  </div>
-</div>
-<div class="ui attached bottom button" style="">
-  Attach to the Vehicle
-</div>
+  <a href="index.html" class="header item">
+  <img class="" src="cruiser.png">
 </a>
+<a href="index.html" class="item">Home</a>
+<a href="search.html" class="item">Search</a>
+<div class="ui simple dropdown item">
+Admin <i class="dropdown icon"></i>
+<div class="menu">
+<a class="item" href="addvehicle.html">Add Vehicle</a>
+<a class="item" href="search.html">Ownerhsip change</a>
+<a class="item" href="addvehicle.html">Parts</a>
+<a class="item" href="search.html">Search</a>
+</div>
+</div>
+</div>
+</div> -->
+
+
+<div class="ui container">
+  <div class="ui padded grid">
+    <div class="eleven wide column">
+      <!-- <h1 class="ui huge header">Cruiser</h1>
+      <p class="ui text">Cruiser introduces a decentralized registry where all information related to a vehicle lifecycle from the production door to the junkyard, including vehicle ownership, insurance history, repair and maintenance, are recorded and made transparent to both businesses and consumers.</p>
+      <div class="ui divider"></div> -->
+
+      <div class="row">
+
+        <h1>Nissan Terrano</h1>
+
+        <div class="ui grid">
+          <div class="ten wide column">
+            <p>Nissan Terrano price starts at ₹ 9.99 Lakhs and goes upto ₹ 14.48 Lakhs. Petrol Terrano price starts at ₹ 9.99 Lakhs. Diesel Terrano price starts at ₹ 9.99 Lakhs.</p>
+            <b>VIN: 1HGCM567X5A034579</b>
+          </div>
+          <div class="six wide column">
+            <img src="https://imgd.aeplcdn.com/1056x594/cw/ec/28376/Nissan-Terrano-Front-view-93548.jpg?v=201711021421&q=80" alt="" width="100%">
+          </div>
+        </div>
+
+
+        <div class="ui hidden divider"></div>
+        <div class="ui divider"></div>
+        <div class="ui hidden divider"></div>
+
+        <div class="ui cards" id="history">
+          <!-- active actions -->
+        </div>
+
 
       </div>
     </div>
-  </div>
+
+    <div class="five wide column" id="actntemplate">
+      <a class="ui card" href="#">
+        <div class="content">
+          <i class="right floated cogs green icon" style="font-size: 30px;"></i>
+          <div class="header">Service 1</div>
+          <div class="description">
+            <ul class="ui list">
+              <li class="item">Scheduled 1000 - Actual 1000</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ui attached bottom  olive button" style="">
+          Attach to the Vehicle (Dev 0%)
+        </div>
+      </a>
+
+      <a class="ui card" href="#">
+        <div class="content">
+          <i class="right floated cogs green icon" style="font-size: 30px;"></i>
+          <div class="header">Service 2</div>
+          <div class="description">
+            <ul class="ui list">
+              <li class="item">Scheduled 5000 - Actual 4500</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ui attached bottom green button" style="">
+          Attach to the Vehicle (Dev +24%)
+        </div>
+      </a>
+
+      <a class="ui card" href="#">
+        <div class="content">
+          <i class="right floated cogs green icon" style="font-size: 30px;"></i>
+          <div class="header">Service 3</div>
+          <div class="description">
+            <ul class="ui list">
+              <li class="item">Scheduled 10000 - Actual 10000</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ui attached bottom green button" style="">
+          Attach to the Vehicle (Dev 0%)
+        </div>
+      </a>
 
 
-  <div class="ui inverted vertical footer segment">
-    <div class="ui center aligned container">
-      <div class="ui stackable inverted grid">
-      </div>
-      <div class="ui inverted section divider"></div>
-      <div class="ui horizontal inverted small divided link list">
-        <a class="item" href="#">Site Map</a>
-        <a class="item" href="#">Contact Us</a>
-        <a class="item" href="#">Terms and Conditions</a>
-        <a class="item" href="#">Privacy Policy</a>
-      </div>
+      <a class="ui card" href="#">
+        <div class="content">
+          <i class="right floated sync yellow icon" style="font-size: 30px;"></i>
+          <div class="header">Part Replacement</div>
+          <div class="description">
+            <ul class="ui list">
+              <li class="item">Scheduled 20000 - Actual 20000</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ui attached bottom olive button" style="">
+          Attach to the Vehicle (Dev 0%)
+        </div>
+      </a>
+
+      <a class="ui card" href="#">
+        <div class="content">
+          <i class="right floated sync yellow icon" style="font-size: 30px;"></i>
+          <div class="header">Part Replacement</div>
+          <div class="description">
+            <ul class="ui list">
+              <li class="item">Scheduled 20000 - Actual 40000</li>
+            </ul>
+          </div>
+        </div>
+        <div class="ui attached bottom red button" style="">
+          Attach to the Vehicle (Dev -100%)
+        </div>
+      </a>
+
     </div>
   </div>
+</div>
+
+
+<div class="ui inverted vertical footer segment">
+  <div class="ui center aligned container">
+    <div class="ui stackable inverted grid">
+    </div>
+    <div class="ui inverted section divider"></div>
+    <div class="ui horizontal inverted small divided link list">
+      <a class="item" href="#">Site Map</a>
+      <a class="item" href="#">Contact Us</a>
+      <a class="item" href="#">Terms and Conditions</a>
+      <a class="item" href="#">Privacy Policy</a>
+    </div>
+  </div>
+</div>
 
 
 
