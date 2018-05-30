@@ -66,6 +66,8 @@ $(function() {
     // })
   })
 
+  $('.menu .item').tab()
+
   // Search
   $('#searchForm').submit(function(e) {
     e.preventDefault()
