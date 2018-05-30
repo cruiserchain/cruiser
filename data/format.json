@@ -1,0 +1,46 @@
+{
+  "make": "Nissan",
+  "modal": "Terrano",
+  "chasisno": "SD23FERTS34DF",
+  "date": "1527235154",
+  "VIN": "X4SD23FERTS34DF",
+  "serviceSchedule": [
+    {
+      "service_1": {
+        "schedule": 2000,
+        "date": "1527235154",
+        "actual": 2000
+      },
+      "service_2": {
+        "schedule": 3000,
+        "date": "1527235154",
+        "actual": 3400
+      }
+    }
+  ],
+  "replacement": [
+    {
+      "part_1": [
+        {
+          "schedule": 2000,
+          "date": "1527235154",
+          "actual": 2000
+        },
+        {
+          "schedule": 2000,
+          "date": "1527235154",
+          "actual": 2000
+        }
+      ]
+    },
+    {
+      "part_2": [
+        {
+          "schedule": 2000,
+          "date": "1527235154",
+          "actual": 2000
+        }
+      ]
+    }
+  ]
+}
